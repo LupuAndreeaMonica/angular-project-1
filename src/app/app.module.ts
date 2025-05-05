@@ -5,17 +5,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {HeaderComponent} from "./header/header.component";
 import { UserComponent } from './user/user.component';
-import {FormsModule} from "@angular/forms";
+import {SharedModule} from "./shared/shared.module";
+import {TaskModule} from "./tasks/task.module";
 
 @NgModule({
-  declarations: [],
-  imports: [
+  declarations: [ // for non-standalone components
     AppComponent,
-    UserComponent,
+    HeaderComponent,
+    UserComponent
+  ],
+  imports: [ // for standalone components
     BrowserModule,
     AppRoutingModule,
-    HeaderComponent,
-    FormsModule
+    SharedModule,
+    TaskModule
   ],
   providers: [],
   bootstrap: [AppComponent]

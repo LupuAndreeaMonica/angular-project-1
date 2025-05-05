@@ -1,6 +1,5 @@
 import {Component, Input, Output, EventEmitter, computed} from '@angular/core';
 import {User} from "./user.model";
-import {CardComponent} from "../shared/card/card.component";
 
 // type User = {
 //   id: string,
@@ -10,12 +9,8 @@ import {CardComponent} from "../shared/card/card.component";
 
 @Component({
     selector: 'app-user',
-    standalone: true,
     templateUrl: './user.component.html',
     styleUrls: ['./user.component.scss'],
-    imports: [
-        CardComponent
-    ]
 })
 export class UserComponent {
   // avatar = input.required<string>();
